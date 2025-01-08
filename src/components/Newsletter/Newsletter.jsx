@@ -1,5 +1,8 @@
 import "./Newsletter.css";
 const Newsletter = () => {
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+  };
   return (
     <>
       <div className="newsletter">
@@ -14,7 +17,11 @@ const Newsletter = () => {
             placeholder="Enter your email"
             required
           />
-          <button type="submit" className="form__button">
+          <button
+            type="submit"
+            className="form__button"
+            onSubmit={onSubmitHandler}
+          >
             SUSCRIBE
           </button>
         </form>
