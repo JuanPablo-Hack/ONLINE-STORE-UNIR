@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../../context/ShopContext";
 import Title from "../Title/Title";
-import "./LatestCollections.css";
 import ProductItem from "../ProductItem/ProductItem";
 
 const LatestCollections = () => {
@@ -12,15 +11,15 @@ const LatestCollections = () => {
   }, []);
   return (
     <>
-      <div className="collections">
-        <div className="collections__title">
+      <div className="section">
+        <div className="section__title">
           <Title text1={"LATEST"} text2={"COLLECTIONS"} />
-          <p className="collections__description">
+          <p className="section__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
         {/* LATEST PRODUCTS */}
-        <div className="collections__products">
+        <div className="section__products">
           {latestProducts.map((item, index) => (
             <ProductItem
               key={index}
