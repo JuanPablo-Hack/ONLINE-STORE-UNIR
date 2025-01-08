@@ -1,5 +1,0 @@
-const LatestCollections = () => {
-  return <div>LatestCollections</div>;
-};
-
-export default LatestCollections;

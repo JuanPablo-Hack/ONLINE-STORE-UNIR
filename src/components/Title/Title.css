@@ -1,0 +1,15 @@
+.contenedor {
+  @apply inline-flex gap-2 items-center mb-3;
+}
+
+.contenedor__text {
+  @apply text-gray-500;
+}
+
+.text__span {
+  @apply text-gray-700 font-medium;
+}
+
+.contenedor__line {
+  @apply w-8 sm:w-12 h-[1px] sm:h-[2px] bg-gray-700;
+}

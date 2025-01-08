@@ -1,0 +1,15 @@
+.collections {
+  @apply my-10;
+}
+
+.collections__title {
+  @apply text-center py-8 text-3xl;
+}
+
+.collections__description {
+  @apply w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600;
+}
+
+.collections__products {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6;
+}

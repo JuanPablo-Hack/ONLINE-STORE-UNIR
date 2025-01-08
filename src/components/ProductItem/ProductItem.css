@@ -1,0 +1,15 @@
+.product {
+  @apply text-gray-700 cursor-pointer;
+}
+.product__image {
+  @apply overflow-hidden;
+}
+.product__image-hover {
+  @apply hover:scale-110 transition ease-in-out;
+}
+.product__name {
+  @apply pt-3 pb-1 text-sm;
+}
+.product__price {
+  @apply text-sm font-medium;
+}
