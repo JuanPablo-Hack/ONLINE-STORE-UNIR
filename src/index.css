@@ -36,3 +36,27 @@
 .section__products {
   @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6;
 }
+
+.collections {
+  @apply flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t;
+}
+
+.collections__filter {
+  @apply min-w-60;
+}
+
+.filter__text {
+  @apply my-2 text-xl flex items-center cursor-pointer gap-2;
+}
+
+.filter__icon {
+  @apply h-3 sm:hidden;
+}
+
+.filter__category {
+  @apply border border-gray-300 pl-5 py-3 mt-6;
+}
+
+.category__title {
+  @apply mb-3 text-sm font-medium;
+}
