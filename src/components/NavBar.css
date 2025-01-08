@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+  @apply flex items-center justify-between py-5 font-medium;
+}
+
+.navbar__logo {
+  @apply w-36;
+}
+
+.navbar__menu {
+  @apply hidden sm:flex gap-5 text-sm text-gray-700;
+}
+
+.menu__item {
+  @apply flex flex-col items-center gap-1;
+}
+
+.item__separator {
+  @apply w-2/4 border-none h-[1.5px] bg-gray-700 hidden;
+}
+
+a.active hr {
+  display: block;
+}
+
+.navbar__sidebar {
+  @apply flex items-center gap-6;
+}
+
+.sidebar__search {
+  @apply w-5 cursor-pointer;
+}
+
+/* .sidebar__options {
+  @apply group relative;
+} */
