@@ -7,7 +7,8 @@ import Contact from "./pages/Contact";
 import Orders from "./pages/Orders";
 import PlaceOrder from "./pages/PlaceOrder";
 import Product from "./pages/Product";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
+import "./index.css";
 
 function App() {
   return (
