@@ -7,7 +7,9 @@ const NavBar = () => {
   const [visible, setVisible] = useState(false);
   return (
     <div className="navbar">
-      <img src={assets.logo} className="navbar__logo" alt="Logo" />
+      <Link to="/">
+        <img src={assets.logo} className="navbar__logo" alt="Logo" />
+      </Link>
       <ul className="navbar__menu">
         <NavLink to="/" className="menu__item">
           <p>Inicio</p>
