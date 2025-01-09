@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Cart from "./pages/Cart";
 import Collections from "./pages/Collections";
 import Contact from "./pages/Contact";
+import Orders from "./pages/Orders";
 import PlaceOrder from "./pages/PlaceOrder";
 import Product from "./pages/Product";
 import NavBar from "./components/NavBar/NavBar";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/collections" element={<Collections />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/orders" element={<Orders />} />
         <Route path="/place-order" element={<PlaceOrder />} />
         <Route path="/product/:id" element={<Product />} />
       </Routes>
