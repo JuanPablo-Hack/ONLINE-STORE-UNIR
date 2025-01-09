@@ -1,10 +1,12 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, createSearchParams } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import "./NavBar.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ShopContext } from "../../context/ShopContext";
 
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
+  const { setShowSearch } = useContext(ShopContext);
   return (
     <div className="navbar">
       <Link to="/">
@@ -30,6 +32,7 @@ const NavBar = () => {
       </ul>
       <div className="navbar__sidebar">
         <img
+          onClick={() => setShowSearch(true)}
           src={assets.search_icon}
           className="sidebar__search"
           alt="Search"

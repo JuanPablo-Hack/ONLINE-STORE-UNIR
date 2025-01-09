@@ -10,11 +10,13 @@ import Product from "./pages/Product";
 import NavBar from "./components/NavBar/NavBar";
 import "./index.css";
 import Footer from "./components/Footer/Footer";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
   return (
     <div className="px-4 sm:px-[5w] md:px-[7vw] lg:px-[9vw]">
       <NavBar />
+      <SearchBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
