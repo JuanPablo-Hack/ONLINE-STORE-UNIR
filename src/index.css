@@ -329,7 +329,7 @@
 .stars__text {
   @apply pl-2;
 }
-.info__price {
+.info__priceorder {
   @apply mt-5 text-3xl font-medium;
 }
 .info__description {
