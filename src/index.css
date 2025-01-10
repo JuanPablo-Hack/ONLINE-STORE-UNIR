@@ -8,6 +8,10 @@
   font-family: Outfit;
 }
 
+.main {
+  @apply px-4 sm:px-[5w] md:px-[7vw] lg:px-[9vw];
+}
+
 .prata-regular {
   font-family: "Prata", serif;
   font-weight: 400;
