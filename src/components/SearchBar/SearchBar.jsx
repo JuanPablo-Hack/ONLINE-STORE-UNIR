@@ -16,23 +16,27 @@ const SearchBar = () => {
       setVisible(false);
     }
   }, [location]);
-  
+
   return showSearch && visible ? (
     <>
-      <div className="border-t border-b bg-gray-50 text-center">
-        <div className="inline-flex items-center justify-center border border-gray-400 px-5 py-2 my-5 mx-3 rounded-full w-3/4 sm:w-1/2">
+      <div className="searchbar">
+        <div className="searchbar__form">
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             type="text"
             placeholder="Search..."
-            className="flex outline-none bg-inherit text-sm"
+            className="form__input"
           />
-          <img className="w-4" src={assets.search_icon} alt="Search Icon" />
+          <img
+            className="form__image"
+            src={assets.search_icon}
+            alt="Search Icon"
+          />
         </div>
         <img
           onClick={() => setShowSearch(false)}
-          className="inline w-3 cursor-pointer"
+          className="searchbar__icon"
           src={assets.cross_icon}
           alt="Cross Icon"
         />

@@ -1,4 +1,4 @@
-import { NavLink, Link, createSearchParams } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import "./NavBar.css";
 import { useContext, useState } from "react";
