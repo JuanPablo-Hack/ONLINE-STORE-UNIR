@@ -5,16 +5,12 @@ import Newsletter from "../components/Newsletter/Newsletter";
 const About = () => {
   return (
     <>
-      <div className="text-2xl text-center pt-8 borber-t">
+      <div className="about">
         <Title text1={"ABOUT"} text2={"US"} />
       </div>
-      <div className="my-10 flex flex-col md:flex-row gap-16">
-        <img
-          className="w-full md:max-w-[450px]"
-          src={assets.about_img}
-          alt=""
-        />
-        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
+      <div className="resume">
+        <img className="resume__img" src={assets.about_img} alt="" />
+        <div className="resume__text">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque
             blanditiis ipsum adipisci dignissimos? Officia, perferendis sapiente
@@ -27,7 +23,7 @@ const About = () => {
             nisi, accusamus aspernatur pariatur fugiat consectetur praesentium
             delectus architecto tempore cum at!
           </p>
-          <b className="text-gray-800">Our Mission</b>
+          <b className="text__mission">Our Mission</b>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
             suscipit quasi asperiores! Odio quis maiores eius ducimus aliquid
@@ -36,13 +32,13 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="text-4xl py-4">
+      <div className="titlewhy">
         <Title text1={"WHY"} text2={"CHOOSE US"} />
       </div>
-      <div className="flex flex-col md:flex-row text-sm mb-20">
-        <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
+      <div className="whychooseus">
+        <div className="whychooseus__item">
           <b>Quality Assurance:</b>
-          <p className="text-gray-600">
+          <p className="item__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vitae
             ut laboriosam esse adipisci culpa asperiores excepturi dolorum
             aliquid praesentium veniam, impedit a unde, dolorem nobis deleniti
@@ -51,7 +47,7 @@ const About = () => {
         </div>
         <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Convenience:</b>
-          <p className="text-gray-600">
+          <p className="item__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vitae
             ut laboriosam esse adipisci culpa asperiores excepturi dolorum
             aliquid praesentium veniam, impedit a unde, dolorem nobis deleniti
@@ -60,7 +56,7 @@ const About = () => {
         </div>
         <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Exceptionalo costumer service:</b>
-          <p className="text-gray-600">
+          <p className="item__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vitae
             ut laboriosam esse adipisci culpa asperiores excepturi dolorum
             aliquid praesentium veniam, impedit a unde, dolorem nobis deleniti

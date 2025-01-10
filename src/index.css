@@ -64,3 +64,34 @@
 .category__title {
   @apply mb-3 text-sm font-medium;
 }
+
+/* About CSS styles */
+
+.about {
+  @apply text-2xl text-center pt-8 border-t;
+}
+
+.resume {
+  @apply my-10 flex flex-col md:flex-row gap-16;
+}
+.resume__img {
+  @apply w-full md:max-w-[450px];
+}
+.resume__text {
+  @apply flex flex-col justify-center gap-6 md:w-2/4 text-gray-600;
+}
+.text__mission {
+  @apply text-gray-800;
+}
+.titlewhy {
+  @apply text-4xl py-4;
+}
+.whychooseus {
+  @apply flex flex-col md:flex-row text-sm mb-20;
+}
+.whychooseus__item {
+  @apply border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5;
+}
+.item__text {
+  @apply text-gray-600;
+}
