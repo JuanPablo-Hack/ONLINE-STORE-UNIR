@@ -172,3 +172,22 @@
 .products__item {
   @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6;
 }
+/* Contact CSS styles */
+.contacttitle {
+  @apply text-center text-2xl pt-10 border-t;
+}
+.contact {
+  @apply my-10 flex flex-col justify-center md:flex-row gap-10 mb-28;
+}
+.contact__image {
+  @apply w-full md:max-w-[480px];
+}
+.contact__info {
+  @apply flex flex-col justify-center items-start gap-6;
+}
+.info__title {
+  @apply font-semibold text-xl text-gray-600;
+}
+.info__text {
+  @apply text-gray-500;
+}
