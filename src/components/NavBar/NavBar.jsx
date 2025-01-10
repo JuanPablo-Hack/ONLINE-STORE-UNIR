@@ -38,61 +38,52 @@ const NavBar = () => {
           alt="Search"
         />
         {/* TODO: Realizar el BEM de este apartado en CSS */}
-        <Link to="/cart" className="relative">
-          <img src={assets.cart_icon} className="w-5 min-w-5" alt="Cart" />
-          <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
-            {getCartCount()}
-          </p>
+        <Link to="/cart" className="sidebar__cart">
+          <img src={assets.cart_icon} className="cart__image" alt="Cart" />
+          <p className="cart__text">{getCartCount()}</p>
         </Link>
         <img
           onClick={() => setVisible(true)}
           src={assets.menu_icon}
           alt="Menu"
-          className="w-5 cursor-pointer sm:hidden"
+          className="sidebar__menu"
         />
       </div>
       {/* Sidebar menu for small screen */}
-      <div
-        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
-          visible ? "w-full" : "w-0"
-        }`}
-      >
-        <div className=" flex flex-col text-gray-600 ">
-          <div
-            onClick={() => setVisible(false)}
-            className="flex items-center gap-4 p-3 cursor-pointer"
-          >
+      <div className={`navbar__menuphone ${visible ? "w-full" : "w-0"}`}>
+        <div className="menuphone__list">
+          <div onClick={() => setVisible(false)} className="list__back">
             <img
               src={assets.dropdown_icon}
               alt="Close"
-              className="h-4 rotate-180"
+              className="back__icon"
             />
             <p>Back</p>
           </div>
           <NavLink
             onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
+            className="list__item"
             to="/"
           >
             Home
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
+            className="list__item"
             to="/collections"
           >
             Collections
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
+            className="list__item"
             to="/about"
           >
             About
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
+            className="list__item"
             to="/contact"
           >
             Contact
