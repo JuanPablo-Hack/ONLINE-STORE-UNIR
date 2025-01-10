@@ -78,13 +78,13 @@ const Cart = () => {
             );
           })}
         </div>
-        <div className="flex justify-end my-20">
-          <div className="w-full sm:w-[450px]">
+        <div className="cart__checkout">
+          <div className="checkout__box">
             <CartTotal />
-            <div className="w-full text-end">
+            <div className="box__item">
               <button
                 onClick={() => navigate("/place-order")}
-                className="bg-black text-white text-sm my-8 px-8 py-3"
+                className="item__button"
               >
                 PROCEED TO CHECKOUT
               </button>

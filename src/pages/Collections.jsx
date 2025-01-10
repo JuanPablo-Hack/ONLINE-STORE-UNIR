@@ -98,9 +98,8 @@ const Collections = () => {
             }  sm:block`}
           >
             <p className="category__title">CATEGORIES</p>
-            {/* TODO: REVISAR EL CSS Y HACER METODO BEM */}
-            <div className="flex flex-col gap text-sm font-light text-gray-700">
-              <p className="flex gap-2">
+            <div className="category__list">
+              <p className="list__item">
                 <input
                   type="checkbox"
                   className="w-3"
@@ -109,7 +108,7 @@ const Collections = () => {
                 />{" "}
                 Men
               </p>
-              <p className="flex gap-2">
+              <p className="list__item">
                 <input
                   type="checkbox"
                   className="w-3"
@@ -118,7 +117,7 @@ const Collections = () => {
                 />{" "}
                 Women
               </p>
-              <p className="flex gap-2">
+              <p className="list__item">
                 <input
                   type="checkbox"
                   className="w-3"
@@ -131,13 +130,13 @@ const Collections = () => {
           </div>
           {/* Subcategory filter */}
           <div
-            className={`border border-gray-300 pl-5 py-3 mt-6 ${
+            className={`filter__subcategory ${
               showFilter ? "" : "hidden"
             }  sm:block`}
           >
-            <p className="mb-3 text-sm font-medium">TYPE</p>
-            <div className="flex flex-col gap text-sm font-light text-gray-700">
-              <p className="flex gap-2">
+            <p className="subcategory__title">TYPE</p>
+            <div className="subcategory__list">
+              <p className="list__item">
                 <input
                   type="checkbox"
                   className="w-3"
@@ -146,7 +145,7 @@ const Collections = () => {
                 />{" "}
                 Topwear
               </p>
-              <p className="flex gap-2">
+              <p className="list__item">
                 <input
                   type="checkbox"
                   className="w-3"
@@ -155,7 +154,7 @@ const Collections = () => {
                 />{" "}
                 Bottomwear
               </p>
-              <p className="flex gap-2">
+              <p className="list__item">
                 <input
                   type="checkbox"
                   className="w-3"
@@ -168,13 +167,13 @@ const Collections = () => {
           </div>
         </div>
         {/* Product Grid */}
-        <div className="flex-1">
-          <div className="flex justify-between text-base sm:text-2xl mb-4">
+        <div className="collections__products">
+          <div className="products__top">
             <Title text1="ALL" text2="COLLECTIONS" />
             {/* Product Sort */}
             <select
               onChange={(e) => setSortType(e.target.value)}
-              className="border-2 border-gray-300 text-sm px-2"
+              className="top__sort"
             >
               <option value="relevant">Sort by: Relevant</option>
               <option value="low-high">Sort by: Low to high</option>
@@ -182,7 +181,7 @@ const Collections = () => {
             </select>
           </div>
           {/* Product Map */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
+          <div className="products__item">
             {filterProducts.map((item, index) => (
               <ProductItem
                 key={index}
