@@ -26,51 +26,57 @@ const Product = () => {
 
   return productData ? (
     <>
-      <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
+      <div className="product">
         {/* Product Data */}
-        <div className="flex gap-12 sm:gap-12 flex-col sm:flex-row">
+        <div className="product__data">
           {/* Product Images */}
-          <div className="flex-1 flex flex-col-reverse gap-3 sm:flex-row">
-            <div className="flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full">
+          <div className="product__gallery">
+            <div className="gallery__list">
               {productData.image.map((item, index) => (
                 <img
                   src={item}
                   key={index}
                   onClick={() => setImage(item)}
-                  className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer"
+                  className="list__image"
                   alt="Galery"
                 />
               ))}
             </div>
-            <div className="w-full sm:w-[80%]">
-              <img className="w-full h-auto" src={image} alt="Image Product" />
+            <div className="gallery__principal">
+              <img
+                className="principal__image"
+                src={image}
+                alt="Image Product"
+              />
             </div>
           </div>
           {/* Product Info */}
-          <div className="flex-1">
-            <h1 className="font-medium text-2xl mt-2">{productData.name}</h1>
-            <div className="flex items-center gap-1 mt-2">
-              <img src={assets.star_icon} alt="Start" className="3-w" />
-              <img src={assets.star_icon} alt="Start" className="3-w" />
-              <img src={assets.star_icon} alt="Start" className="3-w" />
-              <img src={assets.star_icon} alt="Start" className="3-w" />
-              <img src={assets.star_dull_icon} alt="Start" className="3-w" />
-              <p className="pl-2">(122)</p>
+          <div className="product__info">
+            <h1 className="info__name">{productData.name}</h1>
+            <div className="info__stars">
+              <img src={assets.star_icon} alt="Start" className="stars__item" />
+              <img src={assets.star_icon} alt="Start" className="stars__item" />
+              <img src={assets.star_icon} alt="Start" className="stars__item" />
+              <img src={assets.star_icon} alt="Start" className="stars__item" />
+              <img
+                src={assets.star_dull_icon}
+                alt="Start"
+                className="stars__item"
+              />
+              <p className="stars__text">(122)</p>
             </div>
-            <p className="mt-5 text-3xl font-medium">
+            <p className="info__price">
               {currency}
               {productData.price}
             </p>
-            <p className="mt-5 text-gray-500 md:w-4/5">
-              {productData.description}
-            </p>
-            <div className="flex flex-col gap-4 my-8">
+            <p className="info__description">{productData.description}</p>
+            <div className="info__sizes">
               <p>Select Size</p>
-              <div className="flex gap-2">
+              <div className="sizes__list">
                 {productData.sizes.map((item, index) => (
                   <button
                     onClick={() => setSize(item)}
-                    className={`border py-2 px-4 bg-gray-100 ${
+                    className={`list__size ${
                       item === size ? "border-orange-500" : ""
                     }`}
                     key={index}
@@ -82,12 +88,12 @@ const Product = () => {
             </div>
             <button
               onClick={() => addToCart(productData._id, size)}
-              className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700"
+              className="info__addcart"
             >
               ADD TO CART
             </button>
-            <hr className="mt-8 sm:w-4/5" />
-            <div className="text-sm text-gray-500 mt-5 flex flex-col gap-1">
+            <hr className="info__separator" />
+            <div className="info__delivery">
               <p>100% original products.</p>
               <p>Cash on delivery is aviable on this product.</p>
               <p>Easy return and exchange policy within 7 days.</p>
@@ -95,12 +101,12 @@ const Product = () => {
           </div>
         </div>
         {/* Product Reviews */}
-        <div className="mt-20">
-          <div className="flex">
-            <b className="border px-5 py-3 text-sm">Description</b>
-            <p className="border px-5 py-3 text-sm">Reviews (122)</p>
+        <div className="product__reviews">
+          <div className="reviews__top">
+            <b className="top__text">Description</b>
+            <p className="top__text">Reviews (122)</p>
           </div>
-          <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
+          <div className="reviews__resume">
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
               voluptate assumenda alias. Necessitatibus atque modi nostrum.
@@ -118,7 +124,7 @@ const Product = () => {
       </div>
     </>
   ) : (
-    <div className="opacity-0  "></div>
+    <div className="noproduct"></div>
   );
 };
 
