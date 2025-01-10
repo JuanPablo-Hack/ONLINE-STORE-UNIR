@@ -1,0 +1,14 @@
+.carrito {
+  @apply w-full;
+}
+.carritop__top {
+  @apply text-2xl;
+}
+
+.carrito__cuerpo {
+  @apply flex flex-col gap-2 mt-2 text-sm;
+}
+
+.cuerpo__item {
+  @apply flex justify-between;
+}
